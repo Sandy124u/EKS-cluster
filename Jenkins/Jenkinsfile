@@ -21,7 +21,7 @@ pipeline {
               terraform init -reconfigure \\
               -backend-config="bucket=dynomo-db-bucket" \
               -backend-config="key=eks/${params.ENV}/terraform.tfstate" \
-              -backend-config="ap-southeast-2" \
+              -backend-config="region=ap-southeast-2" \
               -backend-config="dynamodb_table=terraform-locks"
             """
           }
