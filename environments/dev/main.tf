@@ -6,6 +6,7 @@ module "eks" {
   vpc_id          = "vpc-xyz"
   node_count      = 2
   environment     = terraform.workspace
+  region          = "ap-southeast-2"  # ✅ Add this line
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
