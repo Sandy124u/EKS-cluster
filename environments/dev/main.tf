@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "ap-southeast-2"
+}
+
+
 
 module "eks" {
   source          = "../../modules/eks"
