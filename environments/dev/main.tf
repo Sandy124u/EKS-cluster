@@ -16,7 +16,7 @@ provider "aws" {
 module "eks" {
   source          = "../../modules/eks"
   cluster_name    = "eks-${terraform.workspace}"
-  cluster_version = "1.28"
+  cluster_version = "1.29"
   subnet_ids      = ["subnet-abc", "subnet-def"]
   vpc_id          = "vpc-xyz"
   node_count      = 2
